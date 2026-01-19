@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" placeholder="Enter your grade" id="score">
+    <button onclick="grade()">Your Grade</button>
+
+    <div id="result">
+
+    </div>
+    
+<script>
+    const score = document.getElementById('score');
+    const result = document.getElementById('result');
+
+    function grade() {
+        score.value = Number(score.value);
+        if (score.value > 100 || score.value < 0 || score.value === "" || isNaN(score.value)) {
+            result.innerHTML = "Please enter a valid score between 0 and 100"
+            result.style.color = "red"
+        } else if (score.value === 100 || score.value >= 80) {
+            result.innerHTML = "Your grade is A"
+            result.style.color = "blue"
+        } else if (score.value >= 70) {
+            result.innerHTML = "Your grade is B"
+            result.style.color = "blue"
+            } else if (score.value >= 60) {
+            result.innerHTML = "Your grade is C"
+        } else if (score.value >= 50) {
+            result.innerHTML = "Your grade is D"
+            result.style.color = "blue"
+        } else {
+            result.innerHTML = "Your grade is F"
+            result.style.color = "red"
+
+        }
+    }
+    result.style.fontSize = "24px"
+    result.style.fontWeight = "500"
+    result.style.marginTop = "10px"
+    result.style.fontFamily = "Arial, sans-serif"
+    
+</script>
+
+
+</body>
+</html>
+<script>
+
+
+</script>
